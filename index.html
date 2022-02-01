@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giphy Clone</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav__logo-container">
+        <h4 class="nav__logo-name">GIPHY</h4>
+      </div>
+      <div class="nav__links-container">
+        <ul>
+          <li class="nav__link-list">
+            <a href="#" class="link nav__link">Reactions</a>
+          </li>
+
+          <li class="nav__link-list">
+            <a href="#" class="link nav__link">Entertainment</a>
+          </li>
+
+          <li class="nav__link-list">
+            <a href="#" class="link nav__link">Sports</a>
+          </li>
+
+          <li class="nav__link-list">
+            <a href="#" class="link nav__link">Stickers</a>
+          </li>
+
+          <li class="nav__link-list">
+            <a href="#" class="link nav__link">Artists</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav__btn-container">
+        <button class="nav__btn btn">Upload</button>
+        <button class="nav__btn btn">Create</button>
+      </div>
+
+      <div class="nav__user">
+        <div class="nav__user-img-wrapper">
+          <img
+            src="https://media.giphy.com/avatars/default3/80h.gif"
+            class="nav__user-img"
+          />
+        </div>
+        <div class="link nav__user-link-wrapper">
+          <a class="link nav__user-link" href="#">Log In.</a>
+        </div>
+        <div class="nav__user-accordion"></div>
+      </div>
+    </nav>
+
+    <div class="search__container">
+      <input type="search" class="search__input" />
+      <img class="search__logo" src="./img/Annotation 2022-01-31 162150.png" />
+    </div>
+    <main class="main">
+      <div class="trending"></div>
+      <div class="search-container"></div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

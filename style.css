@@ -1,0 +1,136 @@
+* {
+  font-weight: 600;
+  color: white;
+}
+
+body {
+  font-family: interface, Helvetica Neue, helvetica, sans-serif;
+  background-color: black;
+}
+
+.nav {
+  display: flex;
+  height: 60px;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.nav__logo-name {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 1.12rem;
+}
+
+.nav__link {
+  margin-right: 5px;
+  padding: 5px 10px;
+}
+
+.nav > div {
+  margin-right: 20px;
+}
+
+.nav > div:last-child {
+  margin-right: 0px;
+}
+
+.nav__btn-container {
+  background: linear-gradient(103deg, #6157ff, #7067ff, #6157ff);
+}
+
+.btn {
+  padding: 8px 10px;
+  font-size: 1.05rem;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-right: 4px solid black;
+}
+
+.nav__user {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  background-color: #3e3e3e;
+  height: 36px;
+}
+.nav__user-img-wrapper,
+.nav__user-img,
+.nav__user-accordion {
+  height: 36px;
+  width: 36px;
+}
+
+.nav__user-link-wrapper {
+  min-width: 100px;
+  text-align: center;
+}
+
+.search__container {
+  width: 100%;
+  max-width: 1200px;
+  height: 52px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.search__input {
+  height: 52px;
+  width: 1146px;
+  margin-right: 6px;
+  background-color: lightslategray;
+}
+
+.search__logo {
+  cursor: pointer;
+}
+
+.main {
+  /* height: 100vh; */
+  min-height: 80vh;
+  max-width: 1200px;
+  width: 100%;
+  border: 1px solid red;
+  margin: 0 auto;
+  /* padding: 0 10px; */
+  box-sizing: border-box;
+}
+
+.trending {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 1200px;
+  min-height: 200px;
+}
+
+.search-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  /* div img {
+    width: 300px;
+  } */
+}
+
+.search-images {
+  width: 281px;
+  height: 168px;
+  padding: 3px;
+}
