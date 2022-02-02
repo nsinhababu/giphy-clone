@@ -2,6 +2,7 @@ const search = document.querySelector('.search__input');
 const searchImgBtn = document.querySelector('.search__logo');
 const trendingContainer = document.querySelector('.trending');
 const gifContainer = document.querySelector('.search-container');
+const searchResultScreen = document.querySelector('.searched-topic');
 
 // search.addEventListener('key', (e) => {
 //   console.log(e.target.value);
@@ -34,13 +35,14 @@ function fetchSearchApi(url) {
 }
 
 searchImgBtn.addEventListener('click', (e) => {
+  searchResultScreen.innerText = search.value;
   const updatedParams = search.value.replaceAll(' ', '+');
   const searchUrl = `http://api.giphy.com/v1/gifs/search?q=${updatedParams}&api_key=${API_KEY}&limit=12`;
   fetchSearchApi(searchUrl);
 });
 
 function fetchTrendingApi() {
-  const trendingUrl = `http://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&limit=14`;
+  const trendingUrl = `http://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&limit=4`;
 
   fetch(trendingUrl)
     .then((response) => response.json())
@@ -51,7 +53,7 @@ function fetchTrendingApi() {
 
 function processTrendingImgs(trendingImgs) {
   const trendingArr = (trendingImgs || []).map((trendingGif) => {
-    const trendingImgLink = trendingGif.images.fixed_width_small_still.url;
+    const trendingImgLink = trendingGif.images.fixed_height.url;
     return `<div><img class = "trending-images" src = "${trendingImgLink}" alt = "${trendingGif.slug}"></div>`;
   });
   trendingContainer.innerHTML = trendingArr;
